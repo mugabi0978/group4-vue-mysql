@@ -1,8 +1,8 @@
 module.exports = {
-    HOST: "localhost",
-    USER: "schoolpe_june010",
-    PASSWORD: "fP##74v@IbO@iafP",
-    DB: "schoolpe_june_internship",
+    HOST: "52.90.135.103",
+    USER: "schoolpe_group1_user",
+    PASSWORD: "9aFkIR5m3CtU#2wK",
+    DB: "schoolpe_group1",
     dialect: "mysql",
     pool: {
         // maximum number of connections to db pool
