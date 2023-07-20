@@ -1,6 +1,7 @@
 module.exports = {
-    HOST: "52.90.135.103",
+    // HOST: "52.90.135.103",
     // HOST: "localhost",
+    HOST: "inpro7.fcomet.com",
     USER: "schoolpe_group1_user",
     PASSWORD: "9aFkIR5m3CtU#2wK",
     DB: "schoolpe_group1",
