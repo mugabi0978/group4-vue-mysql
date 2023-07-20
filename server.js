@@ -80,6 +80,15 @@ app.get("/v1/get-root-param", (request, response) => {
 
 // create tables of they dont exist
 const db = require("./models");
+
+db.sequelize_me.authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
+
 db.sequelize_me.sync();
 
 // define other routes
