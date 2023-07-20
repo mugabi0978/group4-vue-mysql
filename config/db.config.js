@@ -1,6 +1,6 @@
 module.exports = {
-    // HOST: "52.90.135.103",
-    HOST: "localhost",
+    HOST: "52.90.135.103",
+    // HOST: "localhost",
     USER: "schoolpe_group1_user",
     PASSWORD: "9aFkIR5m3CtU#2wK",
     DB: "schoolpe_group1",
