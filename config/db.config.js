@@ -14,7 +14,7 @@ module.exports = {
         // maximum time, in milliseconds, that the db pool tries to connect before it throws an error
         acquire: 30000,
         // maximum time, in milliseconds, that a connection can be idle before being released
-        idle: 100000000
+        idle: 10000
 
     }
 }
