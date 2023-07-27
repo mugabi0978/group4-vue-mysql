@@ -7,17 +7,17 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 // middleware to protect api
-const cors = require("cors");
+// const cors = require("cors");
 
 // define app framework
 const app = express();
 
 // Only allow requests from our front end
-var corsOptions = {
-    origin: "http://localhost:8081"
-};
+// var corsOptions = {
+//     origin: "http://localhost:8081"
+// };
   
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
