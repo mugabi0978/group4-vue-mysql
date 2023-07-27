@@ -13,6 +13,12 @@ module.exports = app => {
     // http://localhost:8085/students/r
     router.get("/r", students_logic.retrieve_students);
     
+    // get a specific student
+    router.get("/:id", students_logic.retrieve_student);
+
+    // get a specific student by address
+    router.get("/find/:physical_address", students_logic.find_students_by_location);
+
     // update students api route
     router.put("/:id", students_logic.update_student); 
 

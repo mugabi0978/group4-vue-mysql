@@ -69,6 +69,56 @@ exports.retrieve_students = (req, res) => {
 
 };
 
+// Find a single Student with an id
+exports.retrieve_student = async (req, res) => {
+    const id_ = req.params.id;
+  
+    const id = await Student.findByPk(id_);
+    if (id === null) {
+      res.status(400).send({
+        message: "Error retrieving Student with id=" + id_
+      });
+      return;
+    }
+  
+    Student.findByPk(id_)
+      .then(data => {
+        res.send(data);
+      })
+      .catch(err => {
+        res.status(500).send({
+          message: "Error retrieving Student with id=" + id_
+        });
+      });
+  };
+
+// Find a student(s) by location
+exports.find_students_by_location = (req, res) => {
+    // const physical_address = req.query.physical_address;
+    const physical_address_ = req.params.physical_address;
+    console.log("Location = "+ physical_address_);
+
+    var condition_like = physical_address_ ? { physical_address: { [Op.like]: `%${physical_address_}%` } } : null; 
+
+    // var condition_equals = first_name ? { first_name: `${first_name}` } : null; 
+
+    // Student.findAll()
+
+    Student.findAll({ where: condition_like})
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+
+            // send error response
+            res.status(400).send({
+                message: err.message || "Error occurred while retrieving students"
+            });
+
+        });
+
+};
+
 // Update Student by id
 exports.update_student = (req, res) => {
     const id = req.params.id;
