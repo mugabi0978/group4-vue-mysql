@@ -2,15 +2,15 @@ module.exports = {
     // HOST: "52.90.135.103",
     // HOST: "localhost",
     // remote //
-    HOST: "inpro7.fcomet.com",
-    USER: "schoolpe_group1_user",
-    PASSWORD: "9aFkIR5m3CtU#2wK",
-    DB: "schoolpe_group1",
+    // HOST: "inpro7.fcomet.com",
+    // USER: "schoolpe_group1_user",
+    // PASSWORD: "9aFkIR5m3CtU#2wK",
+    // DB: "schoolpe_group1",
     // local //
-    // HOST: "localhost",
-    // USER: "sam",
-    // PASSWORD: "Powell%1234",
-    // DB: "school_a",
+    HOST: "localhost",
+    USER: "sam",
+    PASSWORD: "Powell%1234",
+    DB: "school_a",
     dialect: "mysql",
     pool: {
         // maximum number of connections to db pool

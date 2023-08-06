@@ -11,7 +11,7 @@ module.exports = app => {
 
     // retrieve all students api route
     // http://localhost:8085/students/r
-    router.get("/r", students_logic.retrieve_students);
+    router.get("/retrieve", students_logic.retrieve_students);
     
     // get a specific student
     router.get("/:id", students_logic.retrieve_student);
@@ -20,12 +20,12 @@ module.exports = app => {
     router.get("/find/:physical_address", students_logic.find_students_by_location);
 
     // update students api route
-    router.put("/:id", students_logic.update_student); 
+    router.put("/update/:id", students_logic.update_student); 
 
     // update students api route
     router.delete("/delete/:id", students_logic.delete_student); 
 
-    // define default route
+    // define default base url route
     app.use('/students', router);
 
 }
